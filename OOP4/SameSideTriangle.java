@@ -1,27 +1,26 @@
-public class SameSideTriangle extends Triangle {
-    private Double base;
-    private Double height;
-    
-    public SameSideTriangle(String name, Double base, Double height) {
+public class SameSide extends Triangle {
+
+    private Double side;
+
+    public SameSide(String name, Double side) {
         super();
         this.name = name;
-        this.base = base;
-        this.height = height;
+        this.side = side;
         this.calculateArea();
-        super.side1 = base;
-        super.side2 = height;
+        super.side1 = side;
+        super.side2 = side;
+        super.side3 = side;
     }
 
+    @Override
     public void calculateArea() {
-        super.area = (base * height) / 2;
+        super.area = (Math.sqrt(3) / 4) * side * side;
     }
 
+    @Override
     public void getInfo() {
-        System.out.print("SameSideTriangle " + name + " info");
-        System.out.print(" area: " + super.area);
-        System.out.print(" with sides: " + side1);
-        System.out.print(", " + side2);
-        System.out.print(", " + side3);
-        System.out.println();
+        System.out.println("\nSameSide " + name + " info");
+        System.out.println("Area: " + super.area);
+        System.out.println("Side: " + side);
     }
 }
