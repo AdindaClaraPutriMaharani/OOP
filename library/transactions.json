@@ -1,0 +1,13 @@
+[ {
+  "id" : 1,
+  "date" : "2024-05-30",
+  "idMember" : 1,
+  "idBook" : 1,
+  "status" : 1
+}, {
+  "id" : 2,
+  "date" : "2024-05-30",
+  "idMember" : 2,
+  "idBook" : 2,
+  "status" : 1
+} ]

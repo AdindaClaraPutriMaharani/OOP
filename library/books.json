@@ -1,0 +1,17 @@
+[ {
+  "idBook" : 1,
+  "title" : "Java Programming",
+  "author" : "Author A",
+  "description" : "Description A",
+  "categories" : "Programming",
+  "qty" : 5,
+  "booked" : false
+}, {
+  "idBook" : 2,
+  "title" : "Python Programming",
+  "author" : "Author B",
+  "description" : "Description B",
+  "categories" : "Programming",
+  "qty" : 3,
+  "booked" : false
+} ]
