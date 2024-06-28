@@ -5,7 +5,11 @@ public class App {
         records[0] = new Expense(100.50, 10, 4, 2024, "Dinner with friends");
         records[1] = new Income(500.75, 12, 4, 2024, "Freelance payment");
         records[2] = new Expense(30.25, 15, 4, 2024, "Groceries");
+
         displayRecords(records);
+
+        System.out.println("Total Expenses: $" + FinancialRecord.getTotalExpenses());
+        System.out.println("Total Income: $" + FinancialRecord.getTotalIncome());
     }
 
     private static void displayRecords(FinancialRecord[] records) {
