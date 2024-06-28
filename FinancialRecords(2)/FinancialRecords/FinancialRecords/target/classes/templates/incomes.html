@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>incomes</title>
+</head>
+<body>
+    <h1>incomes</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through incomes and display them -->
+            <tr th:each="income : ${incomes}">
+                <td th:text="${income.id}"></td>
+                <td th:text="${income.amount}"></td>
+                <td th:text="${income.day + '/' + income.month + '/' + income.year}"></td>
+                <td th:text="${income.description}"></td>
+                <td>
+                    <a th:href="@{/incomes/{id}(id=${income.id})}">Edit</a> |
+                    <a th:href="@{/incomes/{id}/delete(id=${income.id})}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <a href="/incomes/new">Add New income</a>
+    <br>
+    <a href="/">Back to Homepage</a>
+</body>
+</html>
