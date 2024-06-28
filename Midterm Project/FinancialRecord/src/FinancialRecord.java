@@ -4,6 +4,9 @@ public abstract class FinancialRecord {
     protected int month;
     protected int year;
     protected String description;
+    
+    protected static double totalExpenses = 0;
+    protected static double totalIncome = 0;
 
     public FinancialRecord(double amount, int day, int month, int year, String description) {
         this.amount = amount;
@@ -13,10 +16,12 @@ public abstract class FinancialRecord {
         this.description = description;
     }
 
-    public void details(){
-        System.out.println("Expense:");
-        System.out.println("Amount: $" + amount);
-        System.out.println("Date: " + day + "/" + month + "/" + year);
-        System.out.println("Description: " + description);
+    public abstract void details(); 
+    public static double getTotalExpenses() {
+        return totalExpenses;
+    }
+
+    public static double getTotalIncome() {
+        return totalIncome;
     }
 }
